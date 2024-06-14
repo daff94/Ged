@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Documents</title>
+    <link rel="stylesheet" href="{% static 'AppGed/css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center alert alert-success">Gestion des Documents</h2>
+        {% block content %} {% endblock content %}
+    </div>
+    <script src="{% static  'AppGed/js/jquery.js' %}"></script>
+    <script src="{% static  'AppGed/js/popper.js' %}"></script>
+    <script src="{% static  'AppGed/js/bootstrap.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'AppGed/base.html' %}
+
+{% block content %}   
+
+<p>Nombre de documents : {{ NbrDoc }}</p>
+
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>Document</th>
+            <th>Url</th>
+            <th>Remarque</th>
+            <th>Catégorie</th>
+            <th>Groupe</th>
+        </tr>
+        {% for doc in Documents %} 
+        <tr>
+            <td> {{ doc.nom_document }} </td>
+            <td><a href="http://localhost:8000/media/{{ doc.piecejointe }}">{{ doc.piecejointe }}</a> </td>
+            <td> {{ doc.remarque }} </td>
+            <td> {{ doc.categorie }} </td>
+            <td> {{ doc.groupe }} </td>
+        </tr>
+        {% empty %}
+            <h2> Pas de document </h2>
+        {% endfor %}
+    </table>
+</div>
+{% endblock content %}
